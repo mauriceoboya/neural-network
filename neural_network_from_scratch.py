@@ -1,11 +1,16 @@
 import pandas as pd
+import numpy as nm
 import matplotlib.pyplot as plt
-import numpy as np
 
 
-input=[1,2,3]
-weights=[0.2,0.8,-0.5]
-bias=0.2
+dataset=pd.read_csv('diabetes.csv')
 
-output=input[0]*weights[0]+input[1]*weights[1]+input[2]*weights[2]+bias
-print(output)
+
+x=[2,4,5,6]
+weights=[[0.34,0.23,-0.56,0.9],
+         [0.12,0.98,-0.12,0.12],
+         [0.56,0.43,0.04,.98]]
+bias=2
+
+Outcome=nm.dot(weights,x)+bias
+print(Outcome)
