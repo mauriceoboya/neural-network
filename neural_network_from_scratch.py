@@ -17,6 +17,7 @@ class Forwardpass:
         self.weight = nm.random.rand(hidden_inputs,hidden_neurons)
         self.biases=nm.zeros((1,hidden_neurons))
     def outcome(self,inputs):
+ 
         self.output=nm.dot(inputs,self.weight)+self.biases
         
 
